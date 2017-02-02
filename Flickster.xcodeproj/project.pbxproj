@@ -13,6 +13,7 @@
 		4079A6121E41167600889B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4079A6101E41167600889B7C /* LaunchScreen.storyboard */; };
 		4079A61A1E4116D900889B7C /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079A6191E4116D900889B7C /* MoviesViewController.swift */; };
 		4079A61D1E411F4D00889B7C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079A61C1E411F4D00889B7C /* MovieCell.swift */; };
+		D12A8F713CA75CA4DC49B5C6 /* Pods_Flickster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27C03D05F1C01134C0F98F5 /* Pods_Flickster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		4079A6131E41167600889B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4079A6191E4116D900889B7C /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		4079A61C1E411F4D00889B7C /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		79A40F3F399BCDFDCAA28D8C /* Pods-Flickster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickster.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flickster/Pods-Flickster.release.xcconfig"; sourceTree = "<group>"; };
+		D27C03D05F1C01134C0F98F5 /* Pods_Flickster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flickster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBED72608A2A3CF44CD57C2 /* Pods-Flickster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flickster/Pods-Flickster.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12A8F713CA75CA4DC49B5C6 /* Pods_Flickster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		315E1EF14FED2A9C016A5AA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D27C03D05F1C01134C0F98F5 /* Pods_Flickster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4079A5FB1E41167500889B7C = {
 			isa = PBXGroup;
 			children = (
 				4079A6061E41167500889B7C /* Flickster */,
 				4079A6051E41167500889B7C /* Products */,
+				781F88484BFF0748E17E07CA /* Pods */,
+				315E1EF14FED2A9C016A5AA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,15 @@
 			name = "View Controller";
 			sourceTree = "<group>";
 		};
+		781F88484BFF0748E17E07CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEBED72608A2A3CF44CD57C2 /* Pods-Flickster.debug.xcconfig */,
+				79A40F3F399BCDFDCAA28D8C /* Pods-Flickster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4079A6161E41167600889B7C /* Build configuration list for PBXNativeTarget "Flickster" */;
 			buildPhases = (
+				17C1BDFCDE43873D747F4F2B /* [CP] Check Pods Manifest.lock */,
 				4079A6001E41167500889B7C /* Sources */,
 				4079A6011E41167500889B7C /* Frameworks */,
 				4079A6021E41167500889B7C /* Resources */,
+				D6DFD2D23D04A8C646C76233 /* [CP] Embed Pods Frameworks */,
+				6AE3E000553FDC130BCF4A84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +177,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17C1BDFCDE43873D747F4F2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AE3E000553FDC130BCF4A84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flickster/Pods-Flickster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DFD2D23D04A8C646C76233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flickster/Pods-Flickster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4079A6001E41167500889B7C /* Sources */ = {
@@ -277,6 +352,7 @@
 		};
 		4079A6171E41167600889B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBED72608A2A3CF44CD57C2 /* Pods-Flickster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DS58XKSVFX;
@@ -290,6 +366,7 @@
 		};
 		4079A6181E41167600889B7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A40F3F399BCDFDCAA28D8C /* Pods-Flickster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DS58XKSVFX;
