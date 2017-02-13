@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="neB-lD-kgW" id="xic-fi-HA6">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="189"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="v2J-7S-5md">
@@ -128,7 +128,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bGE-oY-MhS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cAu-uL-n8K" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MoviesNavController" automaticallyAdjustsScrollViewInsets="NO" id="cAu-uL-n8K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Jb-tH-uWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

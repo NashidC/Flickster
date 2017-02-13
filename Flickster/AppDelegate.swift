@@ -19,6 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nowPlayingNavControl = storyboard.instantiateViewController(withIdentifier: "MoviesNavController") as! UINavigationController
+        let nowPlayingViewControl = nowPlayingNavControl.topViewController as! MoviesViewController
+        nowPlayingViewControl.endpoint = "now_playing"
+        
+        let topRatedNavControl = storyboard.instantiateViewController(withIdentifier: "MoviesNavController") as! UINavigationController
+        
+        let topRatedViewControl = topRatedNavControl.topViewController as! MoviesViewController
+        topRatedViewControl.endpoint = "top_rated"
+        
+        let tabBarControl = UITabBarController()
+        tabBarControl.viewControllers = [nowPlayingNavControl, topRatedNavControl]
+        
+        window?.rootViewController = tabBarControl
+        window?.makeKeyAndVisible()
         return true
     }
 

@@ -73,9 +73,9 @@
 		4079A6061E41167500889B7C /* Flickster */ = {
 			isa = PBXGroup;
 			children = (
+				4079A6071E41167600889B7C /* AppDelegate.swift */,
 				4079A61E1E411F5600889B7C /* View Controller */,
 				4079A61B1E411F2A00889B7C /* Views */,
-				4079A6071E41167600889B7C /* AppDelegate.swift */,
 				4079A60B1E41167600889B7C /* Main.storyboard */,
 				4079A60E1E41167600889B7C /* Assets.xcassets */,
 				4079A6101E41167600889B7C /* LaunchScreen.storyboard */,
